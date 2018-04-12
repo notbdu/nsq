@@ -404,7 +404,7 @@ func (c *ClusterInfo) GetNSQDProducers(nsqdHTTPAddrs []string) (Producers, error
 			producers = append(producers, &Producer{
 				Version:          infoResp.Version,
 				VersionObj:       version,
-				BroadcastAddress: infoResp.BroadcastAddress,
+				BroadcastAddress: addr,
 				Hostname:         infoResp.Hostname,
 				HTTPPort:         infoResp.HTTPPort,
 				TCPPort:          infoResp.TCPPort,
